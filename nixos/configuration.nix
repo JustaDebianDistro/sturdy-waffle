@@ -144,6 +144,7 @@
   zig
   obs-studio
   tealdeer
+  git
 
   ffmpeg
   gst_all_1.gstreamer
