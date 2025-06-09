@@ -10,6 +10,8 @@
       ./hardware-configuration.nix
     ];
 
+  nix.settings.experimental-features = ["nix-command" "flakes"];
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -66,7 +68,7 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -111,6 +113,9 @@
     ];
   };
 
+  services.mullvad-vpn.enable = true;
+  services.deluge.enable = true;
+  
   # Install firefox.
   programs.firefox.enable = true;
 
@@ -131,7 +136,7 @@
   vlc
   ghostty
   librewolf
-  mullvad-vpn
+#  mullvad-vpn
 #  docker
   distrobox
   fastfetch
@@ -145,6 +150,7 @@
   obs-studio
   tealdeer
   git
+  libreoffice
 
   ffmpeg
   gst_all_1.gstreamer
