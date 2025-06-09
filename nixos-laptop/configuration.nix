@@ -18,7 +18,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "UNSC-Dresden"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -53,6 +53,12 @@
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
   services.desktopManager.cosmic.enable = true;
+  programs.hyprland.enable = true;
+  programs.river.enable = true;
+
+  #services.desktopManager.river.enable = true;
+  #services.desktopManager.sway.enable = true;
+  #services.desktopManager.hyprland.enable = true;
 
   services.mullvad-vpn.enable = true;
 
@@ -145,6 +151,16 @@
     nixfmt-classic
     nil
     zls
+    # Hyprland dependencies
+    waybar
+    rofi-wayland
+    swaybg
+    swaylock
+    wl-clipboard
+    # River dependencies
+    foot          # Terminal emulator
+    wofi          # Application launcher
+    
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
