@@ -57,6 +57,7 @@
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
+  programs.hyprland.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -135,6 +136,7 @@
   neovim
   vlc
   ghostty
+  wezterm
   librewolf
 #  mullvad-vpn
 #  docker
@@ -151,6 +153,10 @@
   tealdeer
   git
   libreoffice
+ # cura
+ # blender
+  freecad
+  cura-appimage
 
   ffmpeg
   gst_all_1.gstreamer
