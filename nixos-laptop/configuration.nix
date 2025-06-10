@@ -17,6 +17,12 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  boot.plymouth = {
+    enable = true;
+    theme = "circuit";
+    themePackages = [pkgs.adi1090x-plymouth-themes];
+  };
+
   networking.hostName = "UNSC-Dresden"; # Define your hostname.
   #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -54,12 +60,31 @@
   services.desktopManager.plasma6.enable = true;
   services.desktopManager.cosmic.enable = true;
   programs.hyprland.enable = true;
-  programs.river.enable = true;
+  programs.sway.enable = true;
+  #programs.cardboard.enable = true;
+    
+
 
   #services.desktopManager.river.enable = true;
   #services.desktopManager.sway.enable = true;
   #services.desktopManager.hyprland.enable = true;
 
+  # # Enable dark theme system-wide
+  # qt.platformTheme = "gtk";
+  # gtk = {
+  #   enable = true;
+  #   theme = {
+  #     name = "Adwaita-dark";
+  #     package = pkgs.gnome.gnome-themes-extra;
+  #   };
+  #   iconTheme = {
+  #     name = "Tela-dracula-dark";
+  #     package = pkgs.tela-icon-theme;
+  #   };
+  # };
+
+
+  
   services.mullvad-vpn.enable = true;
 
 #  services.fprintd.enable = true;
@@ -160,6 +185,9 @@
     # River dependencies
     foot          # Terminal emulator
     wofi          # Application launcher
+    terminus_font # Pixel-style font
+   # xcursor-theme # Thick cursors
+   # glslview # Shader preview
     
   ];
 
