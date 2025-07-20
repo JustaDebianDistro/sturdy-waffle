@@ -140,7 +140,6 @@
   scanmem
   htop
   unzip
-  untar
   vlc
   ghostty
   wezterm
