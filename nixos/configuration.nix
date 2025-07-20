@@ -101,16 +101,19 @@
   users.users.rel = {
     isNormalUser = true;
     description = "Rel";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "dialout" ];
     packages = with pkgs; [
       kdePackages.kate
       freetube
+      brave
       boxbuddy
      # logseq
       blender
       gimp
       fish
       discord
+      r2modman
+      vintagestory
     ];
   };
 
@@ -134,6 +137,10 @@
     
   emacs
   neovim
+  scanmem
+  htop
+  unzip
+  untar
   vlc
   ghostty
   wezterm
@@ -157,6 +164,7 @@
  # blender
   freecad
   cura-appimage
+  parted
 
   ffmpeg
   gst_all_1.gstreamer
