@@ -97,6 +97,10 @@
     dockerCompat = true;
   };
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "dotnet-runtime-7.0.20"
+  ];
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.rel = {
     isNormalUser = true;
@@ -110,6 +114,7 @@
      # logseq
       blender
       gimp
+      krita
       fish
       discord
       r2modman
