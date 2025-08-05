@@ -172,7 +172,18 @@
 
   ffmpeg
   gst_all_1.gstreamer
-  
+
+# Emacs stuff
+  nixfmt-classic
+  nil
+  zls
+
+# Hyprland dependencies
+  waybar
+  rofi-wayland
+  swaybg
+  swaylock
+  wl-clipboard
   
 
   #test pkgs
