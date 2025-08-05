@@ -139,11 +139,11 @@
       kdePackages.kate
       fish
       freetube
+      brave
       wezterm
       mullvad-vpn
       mullvad-browser
       vlc
-      brave
       boxbuddy
       discord
     ];
@@ -161,10 +161,10 @@
 
   environment.systemPackages = with pkgs; [
     home-manager
+    usbutils
     flatpak
     emacs
     neovim
-    usbutils
    # fprintd
     tealdeer
     fastfetch
