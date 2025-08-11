@@ -152,7 +152,8 @@
     ghostty
     wezterm
     librewolf
-    protonup-qt
+    #  mullvad-vpn
+    #  docker
     distrobox
     fastfetch
     heroic
@@ -166,6 +167,8 @@
     tealdeer
     git
     libreoffice
+    # cura
+    # blender
     freecad
     cura-appimage
     parted
