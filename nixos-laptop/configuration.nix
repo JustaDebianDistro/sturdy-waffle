@@ -134,7 +134,7 @@
   users.users.rel = {
     isNormalUser = true;
     description = "Rel";
-    extraGroups = [ "networkmanager" "wheel" "dialout" ];
+    extraGroups = [ "networkmanager" "wheel" "dialout" "adbusers" ];
     packages = with pkgs; [
       kdePackages.kate
       fish
@@ -159,12 +159,16 @@
    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
  };
 
+
+  services.flatpak.enable = true;
+ 
   environment.systemPackages = with pkgs; [
     home-manager
-    flatpak
     emacs
+    ntfs3g
     neovim
     usbutils
+   # adb
    # fprintd
     tealdeer
     fastfetch
