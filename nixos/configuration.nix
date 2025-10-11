@@ -100,6 +100,7 @@
 
   nixpkgs.config.permittedInsecurePackages = [
     "dotnet-runtime-7.0.20"
+    "freeimage-3.18.0-unstable-2024-04-18"
   ];
 
   services.flatpak.enable = true;
@@ -140,6 +141,8 @@
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
+
+  #nixpkgs.config.permittedInsecurePackages = true;
 
   environment.systemPackages = with pkgs; [
 
