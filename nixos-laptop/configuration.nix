@@ -130,6 +130,17 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+
+
+  nixpkgs.config.permittedInsecurePackages = [
+    "dotnet-runtime-7.0.20"
+    "freeimage-3.18.0-unstable-2024-04-18"
+    "ventoy-1.1.05"
+  ];
+
+  services.flatpak.enable = true;
+
+  
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.rel = {
     isNormalUser = true;
@@ -159,8 +170,6 @@
    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
  };
 
-
-  services.flatpak.enable = true;
  
   environment.systemPackages = with pkgs; [
     home-manager
@@ -168,6 +177,7 @@
     ntfs3g
     neovim
     usbutils
+    ventoy
    # adb
    # fprintd
     tealdeer
