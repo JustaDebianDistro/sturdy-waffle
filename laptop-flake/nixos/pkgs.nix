@@ -58,7 +58,7 @@
     
     # Hyprland dependencies
     waybar
-    rofi-wayland
+    rofi
     swaybg
     swaylock
     wl-clipboard
