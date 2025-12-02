@@ -22,7 +22,6 @@
       brave
       boxbuddy
       discord
-      telegram
     ];
   };
 
