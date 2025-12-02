@@ -10,18 +10,16 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    ...
-  } @ inputs: let
+  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+    let
+      system = "x86_64-linux";
+      pkgs = nixpkgs.legacyPackages.${system};
   in {
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
       # FIXME replace with your hostname
-      your-hostname = nixpkgs.lib.nixosSystem {
+      UNSC-Dresden = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         # > Our main nixos configuration file <
         modules = [./nixos/configuration.nix];
@@ -34,7 +32,7 @@
       # FIXME replace with your username@hostname
       "rel@UNSC-Dresden" = home-manager.lib.homeManagerConfiguration {
         # Home-manager requires 'pkgs' instance
-        pkgs = nixpkgs.defaultPackage.x86_64-linux; # FIXME replace x86_64-linux with your architecure 
+      #  pkgs = nixpkgs.defaultPackage.x86_64-linux; # FIXME replace x86_64-linux with your architecure 
         extraSpecialArgs = {inherit inputs;};
         # > Our main home-manager configuration file <
         modules = [./home-manager/home.nix];
