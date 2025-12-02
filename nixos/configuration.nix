@@ -172,9 +172,14 @@
     freecad
     cura-appimage
     parted
+    usbutils
+    cdparanoia
+    picard
+    flac
+
     emulationstation-de
-    retroarch-full
-    retroarch-joypad-autoconfig
+    # retroarch-full
+    # retroarch-joypad-autoconfig
 
     ffmpeg
     gst_all_1.gstreamer
