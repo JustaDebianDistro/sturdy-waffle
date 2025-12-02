@@ -6,7 +6,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
 
     # Home manager
-    home-manager.url = "github:nix-community/home-manager/release-23.11";
+    home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
@@ -34,7 +34,7 @@
       # FIXME replace with your username@hostname
       "rel@UNSC-Dresden" = home-manager.lib.homeManagerConfiguration {
         # Home-manager requires 'pkgs' instance
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; # FIXME replace x86_64-linux with your architecure 
+        pkgs = nixpkgs.defaultPackages.x86_64-linux; # FIXME replace x86_64-linux with your architecure 
         extraSpecialArgs = {inherit inputs;};
         # > Our main home-manager configuration file <
         modules = [./home-manager/home.nix];
