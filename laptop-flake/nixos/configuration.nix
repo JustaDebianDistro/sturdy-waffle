@@ -37,10 +37,10 @@
       # })
     ];
     # Configure your nixpkgs instance
-    config = {
+   # config = {
       # Disable if you don't want unfree packages
-      allowUnfree = true;
-    };
+     # allowUnfree = true;
+   # };
   };
 
   nix = let

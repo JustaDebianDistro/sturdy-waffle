@@ -1,7 +1,9 @@
 
-{ pkgs, ... }:
+{ inputs, lib, config, pkgs, ... }:
 
 {
+
+  nixpkgs.config.allowUnfree = true;
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
@@ -33,8 +35,6 @@
 
   programs.hyprlock.enable = true;
   services.hypridle.enable = true;
-
-  nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
     home-manager
