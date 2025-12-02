@@ -34,7 +34,7 @@
       # FIXME replace with your username@hostname
       "rel@UNSC-Dresden" = home-manager.lib.homeManagerConfiguration {
         # Home-manager requires 'pkgs' instance
-        pkgs = nixpkgs.defaultPackages.x86_64-linux; # FIXME replace x86_64-linux with your architecure 
+        pkgs = nixpkgs.defaultPackage.x86_64-linux; # FIXME replace x86_64-linux with your architecure 
         extraSpecialArgs = {inherit inputs;};
         # > Our main home-manager configuration file <
         modules = [./home-manager/home.nix];
