@@ -11,7 +11,7 @@
   nixpkgs.config.permittedInsecurePackages = [
     "dotnet-runtime-7.0.20"
     "freeimage-3.18.0-unstable-2024-04-18"
-    "ventoy-1.1.05"
+    "ventoy-1.1.07"
   ];
 
   services.flatpak.enable = true;
