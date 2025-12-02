@@ -22,7 +22,7 @@
       brave
       boxbuddy
       discord
-      telegram
+      telegram-desktop
     ];
   };
 
