@@ -1,4 +1,3 @@
-
 { inputs, lib, config, pkgs, ... }:
 
 {
@@ -15,20 +14,20 @@
   ];
 
   services.flatpak.enable = true;
-  
+
   programs.steam = {
-   enable = true;
-   remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-   dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-   localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
- };
+    enable = true;
+    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+  };
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
   services.desktopManager.cosmic.enable = true;
   programs.hyprland.enable = true;
-  
+
   services.mullvad-vpn.enable = true;
 
 
@@ -56,6 +55,7 @@
     cura-appimage
     mullvad-vpn
     wezterm
+    ghostty
     distrobox
     ventoy
     gimp
@@ -65,11 +65,11 @@
     cdparanoia
     picard
     vlc
-    
-    
+
+
     ## Dev Stuff ##
-   # zig
-   # SDL2
+    # zig
+    # SDL2
 
     nixfmt-classic
     nixpkgs-fmt
@@ -104,7 +104,7 @@
     hypridle
     hyprpaper
     hyprsunset
-    hyprpolkitagent    
+    hyprpolkitagent
 
     #????
     #ntfs3g
