@@ -2,12 +2,11 @@
 # Use this to configure your system environment (it replaces /etc/nixos/configuration.nix)
 # This is your system's configuration file.
 # Use this t
-{
-  inputs,
-  lib,
-  config,
-  pkgs,
-  ...
+{ inputs
+, lib
+, config
+, pkgs
+, ...
 }: {
   # You can import other NixOS modules here
   imports = [
@@ -17,21 +16,21 @@
     ./hardware-configuration.nix
   ];
 
-#  nix = let
-#    flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
-#  in {
-#    settings = {
-#      experimental-features = "nix-command flakes";
-#      flake-registry = "";
-#      # Workaround for https://github.com/NixOS/nix/issues/9574
-#      nix-path = config.nix.nixPath;
-#    };
-#    # Opinionated: disable channels
-#    channel.enable = false;
-#
-#    # Opinionated: make flake registry and nix path match flake inputs
-#    registry = lib.mapAttrs (_: flake: {inherit flake;}) flakeInputs;
-#    nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
+  #  nix = let
+  #    flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
+  #  in {
+  #    settings = {
+  #      experimental-features = "nix-command flakes";
+  #      flake-registry = "";
+  #      # Workaround for https://github.com/NixOS/nix/issues/9574
+  #      nix-path = config.nix.nixPath;
+  #    };
+  #    # Opinionated: disable channels
+  #    channel.enable = false;
+  #
+  #    # Opinionated: make flake registry and nix path match flake inputs
+  #    registry = lib.mapAttrs (_: flake: {inherit flake;}) flakeInputs;
+  #    nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
   #  };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -39,7 +38,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  
+
   # TODO: Set your hostname
   networking.hostName = "UNSC-Midnightlamp";
 
@@ -49,7 +48,7 @@
   # Set your time zone.
   time.timeZone = "America/New_York";
 
-   # Select internationalisation properties.
+  # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
@@ -93,7 +92,7 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
   services.deluge.enable = true;
-  
+
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -105,5 +104,5 @@
   };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-  system.stateVersion = "24.11";
+  system.stateVersion = "25.05";
 }
