@@ -10,18 +10,12 @@
   users.users.rel = {
     isNormalUser = true;
     description = "Rel";
-    extraGroups = [ "networkmanager" "wheel" "dialout" "adbusers" ];
+    extraGroups = [ "networkmanager" "wheel" "dialout" "adbusers" "docker" ];
     packages = with pkgs; [
-      kdePackages.kate
       fish
       freetube
-      wezterm
-      mullvad-vpn
-      mullvad-browser
-      vlc
-      brave
-      boxbuddy
       discord
+      telegram-desktop
     ];
   };
 

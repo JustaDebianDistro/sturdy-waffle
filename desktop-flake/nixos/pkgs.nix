@@ -45,19 +45,34 @@
     tealdeer
     fastfetch
     usbutils
+    flac
+    scanmem
+    unzip
 
     emacs
+    parted
     gparted
     gnome-disk-utility
+    cura-appimage
     mullvad-vpn
+    wezterm
     distrobox
     ventoy
+    gimp
+    obs-studio
+    freecad
+    libreoffice
+    cdparanoia
+    picard
+    vlc
+    
     
     ## Dev Stuff ##
-    zig
-    SDL2
+   # zig
+   # SDL2
 
     nixfmt-classic
+    nixpkgs-fmt
     nil
     zls
 
@@ -65,11 +80,15 @@
     librewolf
     brave
     firefox
+    mullvad-browser
 
     ## GAME STUFF ##
     lutris
     heroic
     mangohud
+    protonup-qt
+    r2modman
+    vintagestory
     wine
 
     ## Hyprland things ##
