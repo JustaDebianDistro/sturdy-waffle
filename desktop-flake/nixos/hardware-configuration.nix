@@ -8,20 +8,25 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "usb_storage" "sd_mod" "rtsx_pci_sdmmc" ];
+  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-intel" ];
+  boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/0f8f4463-4823-4b0a-b2c9-e5834f9f796f";
+    { device = "/dev/disk/by-uuid/df516fe3-f67d-4667-9262-8f16ff2cee11";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/E657-D26C";
+    { device = "/dev/disk/by-uuid/B95F-23C6";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
+    };
+
+  fileSystems."/home/rel/Cargohold" =
+    { device = "/dev/disk/by-uuid/5fb04b2c-85d5-4bd7-af9e-ed5b999a6de6";
+      fsType = "ext4";
     };
 
   swapDevices = [ ];
@@ -31,9 +36,9 @@
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.enp0s31f6.useDHCP = lib.mkDefault true;
-  # networking.interfaces.wlp4s0.useDHCP = lib.mkDefault true;
+  # networking.interfaces.enp39s0.useDHCP = lib.mkDefault true;
+  # networking.interfaces.wlo1.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
