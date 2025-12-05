@@ -45,8 +45,8 @@
     htop
     distrobox
 
-    zig
-    SDL2
+#    zig
+#    SDL2
 
     nixfmt-classic
     nil
