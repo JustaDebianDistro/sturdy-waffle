@@ -40,11 +40,12 @@
   fonts.packages = with pkgs; [
     nerd-fonts.shure-tech-mono
     nerd-fonts.departure-mono
-    nerd-fonts.orbitron
+   # nerd-fonts.orbitron
     nerd-fonts.fira-code
     nerd-fonts.jetbrains-mono
    # (nerd-fonts.override { fonts = [ "ShareTechMono" "Orbitron" ]; })
     corefonts
+    orbitron
     noto-fonts
     noto-fonts-emoji
     cascadia-code
