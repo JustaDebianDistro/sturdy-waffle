@@ -36,6 +36,12 @@
   programs.hyprlock.enable = true;
   services.hypridle.enable = true;
 
+  # Fonts
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "ShareTechMono" "Orbitron" ]; })
+    corefonts
+  ];
+
   environment.systemPackages = with pkgs; [
     home-manager
     emacs
@@ -69,7 +75,17 @@
     hypridle
     hyprpaper
     hyprsunset
-    hyprpolkitagent    
+    hyprpolkitagent
+    kitty
+
+    ## test things
+    mpv
+    cava
+    pfetch
+    xscreensaver
+    fortune
+    cmatrix
+    xorg.xeyes
 
     #????
     #ntfs3g
