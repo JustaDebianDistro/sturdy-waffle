@@ -30,7 +30,6 @@
 
   services.mullvad-vpn.enable = true;
 
-
   programs.hyprlock.enable = true;
   services.hypridle.enable = true;
 
@@ -65,7 +64,6 @@
     cdparanoia
     picard
     vlc
-
 
     ## Dev Stuff ##
     # zig
