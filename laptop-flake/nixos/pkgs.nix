@@ -47,7 +47,7 @@
     corefonts
     orbitron
     noto-fonts
-    noto-fonts-emoji
+    noto-fonts-color-emoji
     cascadia-code
     monaspace
   ];
