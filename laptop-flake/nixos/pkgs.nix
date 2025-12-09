@@ -38,7 +38,7 @@
 
   # Fonts
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "ShareTechMono" "Orbitron" ]; })
+    (nerd-fonts.override { fonts = [ "ShareTechMono" "Orbitron" ]; })
     corefonts
   ];
 
@@ -60,7 +60,6 @@
    
     usbutils
     ventoy
-
     
     # Hyprland dependencies
     waybar
