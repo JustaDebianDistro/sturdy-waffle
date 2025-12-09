@@ -97,7 +97,7 @@
     nitch
     oneko
     neofetch
-    lua5_4_compact
+    #lua5_4_compact
     glava
 
     #????
