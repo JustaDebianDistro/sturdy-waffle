@@ -38,8 +38,14 @@
 
   # Fonts
   fonts.packages = with pkgs; [
-    (nerd-fonts.override { fonts = [ "ShareTechMono" "Orbitron" ]; })
+    nerd-fonts.ShareTechMono
+    nerd-fonts.Orbitron
+    nerd-fonts.FiraCode
+    nerd-fonts.JetBrainsMono
+   # (nerd-fonts.override { fonts = [ "ShareTechMono" "Orbitron" ]; })
     corefonts
+    noto-fonts
+    noto-fonts-emoji
   ];
 
   environment.systemPackages = with pkgs; [
@@ -85,6 +91,14 @@
     fortune
     cmatrix
     xorg.xeyes
+    conky
+    lolcat
+    cowsay
+    nitch
+    oneko
+    neofetch
+    lua5_4_compact
+    glava
 
     #????
     #ntfs3g
