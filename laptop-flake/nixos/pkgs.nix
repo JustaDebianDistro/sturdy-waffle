@@ -38,14 +38,17 @@
 
   # Fonts
   fonts.packages = with pkgs; [
-    nerd-fonts.ShareTechMono
-    nerd-fonts.Orbitron
-    nerd-fonts.FiraCode
-    nerd-fonts.JetBrainsMono
+    nerd-fonts.shure-tech-mono
+    nerd-fonts.departure-mono
+    nerd-fonts.orbitron
+    nerd-fonts.fira-code
+    nerd-fonts.jetbrains-mono
    # (nerd-fonts.override { fonts = [ "ShareTechMono" "Orbitron" ]; })
     corefonts
     noto-fonts
     noto-fonts-emoji
+    cascadia-code
+    monaspace
   ];
 
   environment.systemPackages = with pkgs; [
