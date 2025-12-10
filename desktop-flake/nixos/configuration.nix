@@ -1,6 +1,6 @@
 #==========================#
-# UNSC-Midnightlamp config #
-# My main desktop config   #
+#     UNSC-Midnightlamp    #
+#  My main desktop config  #
 #==========================#
 
 { inputs, lib, config, pkgs, ...}:

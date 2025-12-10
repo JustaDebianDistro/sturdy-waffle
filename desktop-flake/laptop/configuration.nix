@@ -1,27 +1,15 @@
-# This is your system's configuration file.
-# Use this to configure your system environment (it replaces /etc/nixos/configuration.nix)
-# This is your system's configuration file.
-# Use this t
-{
-  inputs,
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
-  # You can import other NixOS modules here
-  imports = [
-    # If you want to use modules from other flakes (such as nixos-hardware):
-    # inputs.hardware.nixosModules.common-cpu-amd
-    # inputs.hardware.nixosModules.common-ssd
+#====================#
+#    UNSC-DRESDEN    #
+#  my laptop config  #
+#====================#
+{ inputs, lib, config, pkgs, ... }:
 
-    # You can also split up your configuration and import pieces of it here:
+{
+  imports = [
     ./users.nix
     ./pkgs.nix
-
-    # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
-  ];#
+  ];
 
   nix = let
     flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
@@ -41,8 +29,6 @@
     registry = lib.mapAttrs (_: flake: {inherit flake;}) flakeInputs;
     nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
   };
-
-  # FIXME: Add the rest of your current configuration
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
