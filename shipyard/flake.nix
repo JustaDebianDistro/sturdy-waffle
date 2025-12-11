@@ -18,7 +18,7 @@
     {
       nixosConfigurations.UNSC-Midnightlamp = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
-        modules = [ ./nixos/unsc-midnightlamp.nix ];
+        modules = [ ./nixos/midnightlamp.nix ];
         # inputs.home-manager.nixosModules.default ];
       };
       nixosConfigurations.UNSC-Dresden = nixpkgs.lib.nixosSystem { specialArgs = { inherit inputs; }; modules = [ ./nixos/unsc-dresden.nix ]; };
