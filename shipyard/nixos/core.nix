@@ -5,19 +5,8 @@
 { inputs, lib, config, pkgs, ... }:
 
 {
-  #  imports = [
-  #    ./users.nix
-  #    ./pkgs.nix
-  #    ./hardware-configuration.nix
-  #  ];
-  #
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  # Bootloader.
-  #  boot.loader.systemd-boot.enable = true;
-  #  boot.loader.efi.canTouchEfiVariables = true;
-
-  #  networking.hostName = "UNSC-Midnightlamp";
 
   # Set your time zone.
   time.timeZone = "America/New_York";
@@ -37,13 +26,7 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  #  hardware.graphics = {
-  #    enable = true;
-  #    enable32Bit = true;
-  #  };
-
   # Enable the X11 windowing system.
-  # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
 
   # Configure keymap in X11
