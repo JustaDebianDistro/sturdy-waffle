@@ -11,19 +11,16 @@
   };
 
   outputs = { self, nixpkgs, ... }@inputs:
-    let
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-    in
+    #    let
+    #      system = "x86_64-linux";
+    #      pkgs = nixpkgs.legacyPackages.${system};
+    #    in
     {
-      # use "nixos", or your hostname as the name of the configuration
-      # it's a better practice than "default" shown in the video
       nixosConfigurations.UNSC-Midnightlamp = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
-        modules = [
-          ./nixos/configuration.nix
-          # inputs.home-manager.nixosModules.default
-        ];
+        modules = [ ./nixos/unsc-midnightlamp.nix ];
+        # inputs.home-manager.nixosModules.default ];
       };
+      nixosConfigurations.UNSC-Dresden = nixpkgs.lib.nixosSystem { specialArgs = { inherit inputs; }; modules = [ ./nixos/unsc-dresden.nix ]; };
     };
 }
